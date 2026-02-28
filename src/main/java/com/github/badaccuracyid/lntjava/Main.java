@@ -101,14 +101,14 @@ public class Main {
     }
 
     private void viewAccounts() {
-        System.out.printf("%-2s %-10s %-10s %-10s %-10s %-10s",
+        System.out.printf("%-2s %-10s %-10s %-10s %-10s %-10s\n",
                 "No", "ID", "Username", "Gender", "Position", "Salary");
         AtomicInteger i = new AtomicInteger();
         database.getEmployeeMap().values().stream()
                 .sorted(Comparator.comparing(Employee::getUsername))
                 .forEach(it -> {
                     i.getAndIncrement();
-                    System.out.printf("%-2d %-10s %-10s %-10s %-10s %-10s",
+                    System.out.printf("%-2d %-10s %-10s %-10s %-10s %-10s\n",
                             i.get(),
                             it.getId(),
                             it.getUsername(),
@@ -122,14 +122,14 @@ public class Main {
     }
 
     private void updateAccount() {
-        System.out.printf("%-2s %-10s %-10s %-10s %-10s %-10s",
+        System.out.printf("%-2s %-10s %-10s %-10s %-10s %-10s\n",
                 "No", "ID", "Username", "Gender", "Position", "Salary");
         AtomicInteger i = new AtomicInteger();
         database.getEmployeeMap().values().stream()
                 .sorted(Comparator.comparing(Employee::getUsername))
                 .forEach(it -> {
                     i.getAndIncrement();
-                    System.out.printf("%-2d %-10s %-10s %-10s %-10s %-10s",
+                    System.out.printf("%-2d %-10s %-10s %-10s %-10s %-10s\n",
                             i.get(),
                             it.getId(),
                             it.getUsername(),
@@ -199,14 +199,14 @@ public class Main {
     }
 
     private void deleteAccount() {
-        System.out.printf("%-2s %-10s %-10s %-10s %-10s %-10s",
+        System.out.printf("%-2s %-10s %-10s %-10s %-10s %-10s\n",
                 "No", "ID", "Username", "Gender", "Position", "Salary");
         AtomicInteger i = new AtomicInteger();
         database.getEmployeeMap().values().stream()
                 .sorted(Comparator.comparing(Employee::getUsername))
                 .forEach(it -> {
                     i.getAndIncrement();
-                    System.out.printf("%-2d %-10s %-10s %-10s %-10s %-10s",
+                    System.out.printf("%-2d %-10s %-10s %-10s %-10s %-10s\n",
                             i.get(),
                             it.getId(),
                             it.getUsername(),
